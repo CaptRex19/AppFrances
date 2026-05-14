@@ -410,14 +410,17 @@ function buildFlashDeck({ courseId, theme, mode }) {
 }
 
 function renderFlashcards() {
+  const targetCourseId = viewParams.courseId || 'all';
+  const targetTheme = viewParams.theme || null;
+  const targetMode = viewParams.mode || 'all';
   if (!flashSession ||
-      flashSession.courseId !== viewParams.courseId ||
-      flashSession.theme !== viewParams.theme ||
-      flashSession.mode !== viewParams.mode) {
+      flashSession.courseId !== targetCourseId ||
+      flashSession.theme !== targetTheme ||
+      flashSession.mode !== targetMode) {
     flashSession = {
-      courseId: viewParams.courseId || 'all',
-      theme: viewParams.theme || null,
-      mode: viewParams.mode || 'all',
+      courseId: targetCourseId,
+      theme: targetTheme,
+      mode: targetMode,
       deck: buildFlashDeck(viewParams),
       idx: 0, flipped: false, sessionCorrect: 0, sessionWrong: 0
     };
