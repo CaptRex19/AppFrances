@@ -1,5 +1,5 @@
 // Service Worker - cachea la app para uso offline en Android/web.
-const CACHE = 'appfrances-v1';
+const CACHE = 'appfrances-v2';
 const ASSETS = [
   './',
   './index.html',
