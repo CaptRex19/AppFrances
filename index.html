@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="AppFrances" />
+  <meta name="description" content="Aprende francés rápido: vocabulario, flashcards, quiz y comprensión oral para principiantes." />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/svg+xml" href="icon.svg" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <title>AppFrances - Aprende francés rápido</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <span class="brand-flag">🇫🇷</span>
+      <div>
+        <h1>AppFrances</h1>
+        <p class="brand-sub">Aprende francés rápido</p>
+      </div>
+    </div>
+    <nav class="tabs" id="tab-bar">
+      <button class="tab active" data-view="home"><span class="tab-icon">🏠</span><span class="tab-label">Inicio</span></button>
+      <button class="tab" data-view="lessons"><span class="tab-icon">📚</span><span class="tab-label">Lecciones</span></button>
+      <button class="tab" data-view="flashcards"><span class="tab-icon">🎴</span><span class="tab-label">Flashcards</span></button>
+      <button class="tab" data-view="quiz"><span class="tab-icon">🎯</span><span class="tab-label">Quiz</span></button>
+      <button class="tab" data-view="typing"><span class="tab-icon">⌨️</span><span class="tab-label">Escribir</span></button>
+      <button class="tab" data-view="listening"><span class="tab-icon">🎧</span><span class="tab-label">Escucha</span></button>
+      <button class="tab" data-view="progress"><span class="tab-icon">📊</span><span class="tab-label">Progreso</span></button>
+    </nav>
+    <div class="header-actions">
+      <label class="voice-select-wrap" title="Voz francesa para escuchar">
+        <span>🔊</span>
+        <select id="voice-select" aria-label="Voz"></select>
+      </label>
+    </div>
+  </header>
+
+  <main id="app-main"></main>
+
+  <footer class="app-footer">
+    <span id="footer-status">Listo.</span>
+    <span class="footer-credits">Hecho con ❤️ · 4 cursos · 40 audios</span>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="listening.js"></script>
+  <script src="app.js"></script>
+  <script>
+    // Service Worker (PWA - offline). Solo se registra en http(s), no en file://
+    if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').catch(err => console.warn('SW falló:', err));
+      });
+    }
+  </script>
+</body>
+</html>

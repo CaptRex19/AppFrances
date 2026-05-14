@@ -1,0 +1,23 @@
+{
+  "name": "AppFrances - Aprende francés rápido",
+  "short_name": "AppFrances",
+  "description": "Vocabulario, flashcards, quiz, escritura y comprensión oral para aprender francés rápido.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "lang": "es",
+  "categories": ["education", "productivity"],
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ],
+  "shortcuts": [
+    { "name": "Flashcards", "url": "./index.html#flashcards", "icons": [{ "src": "icon-192.png", "sizes": "192x192" }] },
+    { "name": "Quiz", "url": "./index.html#quiz", "icons": [{ "src": "icon-192.png", "sizes": "192x192" }] },
+    { "name": "Escucha", "url": "./index.html#listening", "icons": [{ "src": "icon-192.png", "sizes": "192x192" }] }
+  ]
+}

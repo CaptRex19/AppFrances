@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="url(#bg)"/>
+  <g transform="translate(80 96)">
+    <rect width="117" height="320" fill="#002654"/>
+    <rect x="117" width="118" height="320" fill="#ffffff"/>
+    <rect x="235" width="117" height="320" fill="#ED2939"/>
+  </g>
+  <text x="256" y="430" text-anchor="middle" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="64" font-weight="800" fill="#ffffff" style="letter-spacing:2px">FR</text>
+</svg>
